@@ -120,7 +120,7 @@ $(ARLIB): $(OBJ) $(EXTRA_LINK_DEPENDS)
 	@ln -s ../$(ARLIB) $(ARLIB)
 
 $(SHLIB): $(OBJ) $(EXTRA_LINK_DEPENDS)
-	$(CC) $(CCFLAGS) $(SHFLAGS) $(SHLIBFLAGS) $(EXTRA_PATH) -o ../$(SHLIB) \
+	$(CC) $(GPUFLAGS) $(SHFLAGS) $(SHLIBFLAGS) $(EXTRA_PATH) -o ../$(SHLIB) \
 		$(OBJ) $(EXTRA_LIB) $(LIB)
 	@rm -f $(SHLIB)
 	@ln -s ../$(SHLIB) $(SHLIB)
